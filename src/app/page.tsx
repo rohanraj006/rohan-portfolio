@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Skills from "@/components/Skills";
 import { motion, Variants } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGraduationCap } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const revealVariants: Variants = {
@@ -49,6 +49,14 @@ export default function Home() {
             >
               Software Engineer
             </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="text-lg md:text-xl text-[var(--color-text-muted)] max-w-lg font-light leading-relaxed mt-2"
+            >
+              Data Science Student at SJBIT. Bridging the gap between <strong className="text-purple-300 font-medium">Complex Analytics</strong> and <strong className="text-purple-300 font-medium">Intuitive Design</strong>.
+            </motion.p>
           </motion.div>
 
           {/* Optimized Profile Picture */}
@@ -67,6 +75,20 @@ export default function Home() {
                 className="rounded-full object-cover border-4 border-[#150e28] shadow-2xl"
                 priority
               />
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: 20 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6, type: "spring" }}
+                className="absolute -bottom-2 -right-2 md:-bottom-6 md:-right-6 bg-[var(--color-surface)]/90 backdrop-blur-xl border border-[var(--color-border)] p-3 md:p-4 rounded-2xl shadow-[0_10px_40px_rgba(139,92,246,0.3)] z-20 flex items-center gap-3"
+              >
+                <div className="p-2 md:p-3 bg-purple-500/20 rounded-full text-purple-400">
+                  <FaGraduationCap className="text-xl md:text-2xl" />
+                </div>
+                <div className="flex flex-col text-left pr-2">
+                  <span className="text-[10px] md:text-xs text-[var(--color-text-muted)] font-bold uppercase tracking-wider">Current CGPA</span>
+                  <span className="text-lg md:text-xl font-extrabold text-[var(--color-text)]">8.7</span>
+                </div>
+              </motion.div>
             
           </motion.div>
         </section>
