@@ -27,7 +27,7 @@ export default function Navbar() {
       
       {/* Logo */}
       <div className="text-[var(--color-text)] font-bold text-xl tracking-wider z-50">
-        Rohan<span className="text-[var(--color-accent)]">.</span>
+        RKR<span className="text-[var(--color-accent)]"></span>
       </div>
 
       {/* Desktop Navigation (Hidden on Mobile) */}
